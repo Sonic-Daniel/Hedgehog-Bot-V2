@@ -3,7 +3,7 @@ const axios = require("axios");
 const path = require("path");
 const { getPrefix } = global.utils;
 const { commands, aliases } = global.GoatBot;
-const doNotDelete = "━━━━━━━━━━━━━━━━\n╔╦══• •✠•🤍•✠ • •══╦╗\nミ★𝐒𝐎𝐍𝐈𝐂✄𝐄𝐗𝐄 3.0★彡\n╚╩══• •✠•🤍•✠ • •══╩╝"; // changing this wont change the goatbot V2 of list cmd it is just a decoyy
+const doNotDelete = "━━━━━━━━━━━━━━━━\n╔╦══• •✠•🦔•✠ • •══╦╗\nミ★𝐒𝐎𝐍𝐈𝐂✄𝐄𝐗𝐄 3.0★彡\n╚╩══• •✠•🦔•✠ • •══╩╝"; // changing this wont change the goatbot V2 of list cmd it is just a decoyy
 
 module.exports = {
   config: {
@@ -34,7 +34,7 @@ module.exports = {
       const categories = {};
       let msg = "";
 
-      msg += `╔╦══• •✠•🤍•✠ • •══╦╗\nミ★𝐒𝐎𝐍𝐈𝐂✄𝐄𝐗𝐄 3.0★彡\n╚╩══• •✠•🤍•✠ • •══╩╝\n━━━━━━━━━━━━━━━━`; // replace with your name 
+      msg += `╔╦══• •✠•🦔•✠ • •══╦╗\nミ★𝐒𝐎𝐍𝐈𝐂✄𝐄𝐗𝐄 3.0★彡\n╚╩══• •✠•🦔•✠ • •══╩╝\n━━━━━━━━━━━━━━━━`; // replace with your name 
 
       for (const [name, value] of commands) {
         if (value.config.role > 1 && role < value.config.role) continue;
@@ -46,12 +46,12 @@ module.exports = {
 
       Object.keys(categories).forEach((category) => {
         if (category !== "info") {
-          msg += `\n 📱✨☞${category.toUpperCase()}☜✨📱\n`;
+          msg += `\n 👻✨☞${category.toUpperCase()}☜✨👻\n`;
 
 
           const names = categories[category].commands.sort();
           for (let i = 0; i < names.length; i += 3) {
-            const cmds = names.slice(i, i + 3).map((item) => `\n 🥀✨💦 🌪️${item}🌪️`);
+            const cmds = names.slice(i, i + 3).map((item) => `\n🥀 🌡️${item}🌡️`);
             msg += `\n ${cmds.join(" ".repeat(Math.max(1, 10 - cmds.join("").length)))}`;
           }
 
@@ -62,7 +62,7 @@ module.exports = {
       const totalCommands = commands.size;
       msg += `\n𝐀𝐜𝐭𝐮𝐞𝐥𝐥𝐞𝐦𝐞𝐧𝐭 𝐥𝐞 𝐛𝐨𝐭 𝐝𝐢𝐬𝐩𝐨𝐬𝐞 𝐝𝐞 🏁${totalCommands}🏁𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞𝐬 !\n`;
       msg += `𝐒𝐚𝐢𝐬𝐢𝐬 ${prefix}𝐡𝐞𝐥𝐩 𝐬𝐮𝐢𝐯𝐢 𝐝𝐮 𝐧𝐨𝐦 𝐝𝐞 𝐥𝐚 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞 𝐩𝐨𝐮𝐫 𝐜𝐨𝐧𝐧𝐚𝐢𝐭𝐫𝐞 𝐩𝐥𝐮𝐬 𝐝𝐞 𝐝𝐞𝐭𝐚𝐢𝐥𝐬 𝐬𝐮𝐫 𝐥𝐚 𝐜𝐦𝐝 !\n━━━━━━━━━━━━━━━`;
-      msg += `\n╭──── • 🩶 • ─────╮\n 웃『𝐒𝐇𝐈𝐒𝐔𝐈』ヅ\n╰──── • 🩶 • ─────╯`; // its not decoy so change it if you want 
+      msg += `\n╭──── • 🩶 • ─────╮\n     웃『𝐒𝐇𝐈𝐒𝐔𝐈』ヅ\n╰──── • 🩶 • ─────╯`; // its not decoy so change it if you want 
 
       const helpListImages = [
         "https://i.ibb.co/zVGD257/image.jpg", // add image link here
