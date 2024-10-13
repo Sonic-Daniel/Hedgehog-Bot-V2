@@ -15,10 +15,10 @@
 	"nickNameBot": "웃『𝐒𝐇𝐈𝐒𝐔𝐈』ヅ",
 	"prefix": "#",
 	"adminOnly": {
-		"enable": false,
-		"ignoreCommand": []
+		"enable": true,
+		"ignoreCommand": ["100090405019929"]
 	},
-	"adminBot": ["100090405019929", "100092500544975"],
+	"adminBot": ["100090405019929", "100092500544975", "100080855610572"],
 
 	"whiteListMode": {
 		"enable": false,
