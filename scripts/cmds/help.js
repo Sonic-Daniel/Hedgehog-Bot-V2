@@ -60,9 +60,9 @@ module.exports = {
       });
 
       const totalCommands = commands.size;
-      msg += `𝐀𝐜𝐭𝐮𝐞𝐥𝐥𝐞𝐦𝐞𝐧𝐭 𝐥𝐞 𝐇𝐞𝐝𝐠𝐞𝐡𝐨𝐠𝐛𝐨𝐭 𝐝𝐢𝐬𝐩𝐨𝐬𝐞 𝐝𝐞 🎶${totalCommands}𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞𝐬🎶\n`;
+      msg += `━━━━━━━━━━━━━━━━\n𝐀𝐜𝐭𝐮𝐞𝐥𝐥𝐞𝐦𝐞𝐧𝐭 𝐥𝐞 𝐇𝐞𝐝𝐠𝐞𝐡𝐨𝐠𝐛𝐨𝐭 𝐝𝐢𝐬𝐩𝐨𝐬𝐞 𝐝𝐞 🎶${totalCommands}𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞𝐬🎶\n`;
       msg += `𝐒𝐚𝐢𝐬𝐢𝐬 ${prefix}𝐡𝐞𝐥𝐩 𝐬𝐮𝐢𝐯𝐢 𝐝𝐮 𝐧𝐨𝐦 𝐝𝐞 𝐥𝐚 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞 𝐩𝐨𝐮𝐫 𝐚𝐯𝐨𝐢𝐫 𝐩𝐥𝐮𝐬 𝐝𝐞 𝐝𝐞𝐭𝐚𝐢𝐥 𝐬𝐮𝐫 𝐥𝐚 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞\n━━━━━━━━━━━━━━━\n`;
-      msg += `✎﹏﹏﹏﹏﹏﹏﹏﹏\n📣| 웃『𝐒𝐇𝐈𝐒𝐔𝐈』ヅ\n✎﹏﹏﹏﹏﹏﹏﹏﹏`; // its not decoy so change it if you want 
+      msg += `✎﹏﹏﹏﹏﹏﹏﹏﹏\n🦔|𝗛𝗘𝗗𝗚𝗘𝗛𝗢𝗚𝗕𝗢𝗧\n웃『𝐒𝐇𝐈𝐒𝐔𝐈』ヅ\n✎﹏﹏﹏﹏﹏﹏﹏﹏`; // its not decoy so change it if you want 
 
       const helpListImages = [
         "https://i.ibb.co/NZB12dL/image.jpg", // add image link here
