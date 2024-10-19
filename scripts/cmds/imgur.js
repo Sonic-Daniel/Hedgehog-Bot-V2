@@ -1,47 +1,27 @@
-const axios = require("axios");
+module.exports = {
+  config: {
+    name: "imgur",
+    version: "1.0",
+    author: "AceGun",
+    countDown: 5,
+    role: 0,
+    shortDescription: "",
+    longDescription: {
+      en: ".",
+    },
+    category: "media",
+    guide: {
+      en: "{prefix} <reply with img or vid>",
+    },
+  },
 
-module.exports.config = {
-  name: "imgur",
-  version: "7.4",
-  author: "Odiamus", //don't change owner odiamus 
-  countDown: 5,
-  role: 0,
-  category: "utility",
-  description: "convert image/video/gifs/audio etc. into Imgur link",
-  usages: "reply [image, video, audio, gifs]",
-};
+  onStart: async function ({ api, event, getText }) {
+    const { messageReply } = event;
 
-module.exports.onStart = async function ({ api, event }) {
-  const url = event.messageReply?.attachments[0]?.url;
-  if (!url) {
-    return api.sendMessage(
-      "Please reply to an image, video, audio, gif etc.",
-      event.threadID,
-      event.messageID,
-    );
-  }
-  
-  try {
-    const baseApiUrl = 'https://g-v1.onrender.com';
-    
-    const uploadResponse = await axios.post(`${baseApiUrl}/v1/upload`, null, {
-      params: { url: url },
-    });
-
-    if (uploadResponse.status !== 200 || !uploadResponse.data.link) {
-      throw new Error('Failed to upload image.');
+    if (event.type !== "message_reply" || !messageReply.attachments || messageReply.attachments.length !== 1) {
+      return api.sendMessage(getText("invalidFormat"), event.threadID, event.messageID);
     }
 
-    const shortLink = uploadResponse.data.link;
-    
-    return api.sendMessage(shortLink, event.threadID, event.messageID);
-
-  } catch (error) {
-    console.error(error);
-    return api.sendMessage(
-      "Failed to convert image or video into link.",
-      event.threadID,
-      event.messageID,
-    );
+    return api.sendMessage(messageReply.attachments[0].url, event.threadID, event.messageID);
   }
 };
