@@ -90,7 +90,7 @@ module.exports = {
 
 			missingIdRemove: "⚠ | Please enter ID or tag user to remove whiteListIds role",
 
-			listAdmin: "👑 | List of whiteListIds:\n%1"
+			listAdmin: "📣 | 𝐖𝐇𝐈𝐓𝐄𝐋𝐈𝐒𝐓'𝐒 𝐔𝐒𝐄𝐑𝐒:\n━━━━━━━━━━━━━━━━\n%1"
 
 		}
 
