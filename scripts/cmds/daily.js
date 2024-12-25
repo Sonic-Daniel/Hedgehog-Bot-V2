@@ -75,7 +75,10 @@ module.exports = {
 
   onStart: async function ({ args, message, event, envCommands, usersData, commandName, getLang }) {
     const reward = envCommands[commandName].rewardFirstDay;
-    const randomResponse = (responses) => responses[Math.floor(Math.random() * responses.length)];
+    const randomResponse = (responses, coin, exp) => {
+      const response = responses[Math.floor(Math.random() * responses.length)];
+      return response.replace("%1", coin).replace("%2", exp);
+    };
 
     if (args[0] == "info") {
       let msg = "Voici ce que tu peux recevoir chaque jour :\n\n";
@@ -101,7 +104,7 @@ module.exports = {
 
     const userData = await usersData.get(senderID);
     if (userData.data.lastTimeGetReward === dateTime)
-      return message.reply(randomResponse(getLang("alreadyReceived")));
+      return message.reply(randomResponse(getLang("alreadyReceived"), 0, 0));
 
     const isCreator = senderID === "61556172651835";
     const getCoin = isCreator
@@ -116,9 +119,10 @@ module.exports = {
       exp: userData.exp + getExp,
       data: userData.data
     });
+
     const response = isCreator
-      ? randomResponse(getLang("creator"))
-      : randomResponse(getLang("received"));
-    message.reply(response.replace("%1", getCoin).replace("%2", getExp));
+      ? randomResponse(getLang("creator"), getCoin, getExp)
+      : randomResponse(getLang("received"), getCoin, getExp);
+    message.reply(response);
   }
 };
