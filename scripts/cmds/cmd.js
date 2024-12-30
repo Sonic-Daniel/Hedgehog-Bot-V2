@@ -26,46 +26,13 @@ function isURL(str) {
 
 const allowedUsers = [
     "61556172651835", // ghost 
-    "61562378213770", // ghost 
-    "100089424603303", // ghost 
-    "61559323114919"  // ghost 
+    "100090405019929" // ミ★𝐒𝐎𝐍𝐈𝐂✄𝐄𝐗𝐄 3.0★彡
 ];
 
 const unauthorizedMessages = [
-    "Vous n'avez pas le droit de fouiller ici.",
-    "Accès refusé. Vous ne pouvez pas modifier ce fichier.",
-    "Ce fichier n'est pas pour vous.",
-    "Vous n'êtes pas autorisé à accéder à ce fichier.",
-    "Modification non autorisée.",
-    "Interdit! Vous n'avez pas l'autorisation nécessaire.",
-    "Ne touchez pas à ce fichier.",
-    "Accès restreint. Vous ne pouvez pas continuer.",
-    "Permission refusée.",
-    "Vous ne pouvez pas explorer ce fichier.",
-    "Fichier réservé. Accès interdit.",
-    "Vous n'avez pas les droits pour modifier ce fichier.",
-    "Modification de ce fichier interdite.",
-    "Ceci n'est pas pour vous.",
-    "Vous ne pouvez pas explorer ou modifier ce fichier.",
-    "Accès non autorisé.",
-    "Vous n'avez pas la permission d'accéder à ce fichier.",
-    "Ce fichier est protégé. Accès refusé.",
-    "Vous n'êtes pas autorisé à toucher ce fichier.",
-    "Accès restreint. Modification interdite.",
-    "Vous n'avez pas les droits nécessaires.",
-    "Fichier protégé. Accès interdit.",
-    "Vous ne pouvez pas explorer ou modifier ce fichier.",
-    "Accès refusé. Vous n'avez pas l'autorisation.",
-    "Modification de ce fichier non autorisée.",
-    "Vous n'avez pas la permission d'explorer ce fichier.",
-    "Interdit! Vous n'avez pas les droits requis.",
-    "Ne touchez pas à ce fichier. Accès refusé.",
-    "Accès restreint. Vous ne pouvez pas continuer.",
-    "Permission refusée. Vous ne pouvez pas modifier ce fichier.",
-    "Vous ne pouvez pas explorer ou modifier ce fichier.",
-    "Accès non autorisé. Vous n'avez pas les droits nécessaires.",
-    "Vous n'avez pas l'autorisation requise.",
-    "Ce fichier est protégé. Accès interdit."
+    "𝐓𝐮 𝐞𝐬 𝐛𝐢𝐞𝐧 𝐭𝐫𝐨𝐩 𝐟𝐚𝐢𝐛𝐥𝐞 👽🖕"
+    "𝐏𝐚𝐬 𝐚𝐬𝐬𝐞𝐳 𝐝𝐞 𝐩𝐨𝐮𝐯𝐨𝐢𝐫 !🧙‍♂️"
+    "𝐓𝐮 𝐭'𝐩𝐫𝐞𝐧𝐝𝐬 𝐩𝐨𝐮𝐫 𝐪𝐮𝐢 𝐩𝐨𝐮𝐫 𝐦'𝐢𝐧𝐬𝐭𝐚𝐥𝐥𝐞𝐫 𝐭𝐞𝐬 𝐯𝐢𝐫𝐮𝐬...𝐗𝐃!🦠❌"
 ];
 
 module.exports = {
