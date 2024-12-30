@@ -10,7 +10,7 @@ module.exports = {
       en: "Bank:\nInterest - Balance - Withdraw - Deposit - Transfer - Richest - Loan - Payloan - Lottery - Gamble - HighRiskInvest[hrinvest] - Heist"
     },
     category: "game",
-    countDown: 10,
+    countDown: 1,
     role: 0,
     author: "Loufi | JARiF"
   },
