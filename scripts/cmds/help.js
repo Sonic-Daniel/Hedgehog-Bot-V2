@@ -46,7 +46,7 @@ module.exports = {
 
       Object.keys(categories).forEach((category) => {
         if (category !== "info") {
-          msg += ` ╭─⊚👻🎶${category.toUpperCase()}🎶👻\n`;
+          msg += ` ╭─シ👻🎶${category.toUpperCase()}🎶👻\n`;
 
 
           const names = categories[category].commands.sort();
@@ -55,7 +55,7 @@ module.exports = {
             msg += ` ${cmds.join(" ".repeat(Math.max(1, 10 - cmds.join("").length)))}`;
           }
 
-          msg += `╰──────────────⊚\n`;
+          msg += `╰──────────────シ\n`;
         }
       });
 
@@ -97,7 +97,7 @@ module.exports = {
         const guideBody = configCommand.guide?.en || "No guide available.";
         const usage = guideBody.replace(/{p}/g, prefix).replace(/{n}/g, configCommand.name);
 
-        const response = `╭── NAME ────⭓
+        const response = `╭── NAME ────シ
   │ ${configCommand.name}
   ├── INFO
   │ Description: ${longDescription}
@@ -112,7 +112,7 @@ module.exports = {
   ├── Notes
   │ The content inside <XXXXX> can be changed
   │ The content inside [a|b|c] is a or b or c
-  ╰━━━━━━━❖`;
+  ╰━━━━━━━シ`;
 
         await message.reply(response);
       }
