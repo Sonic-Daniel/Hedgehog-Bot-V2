@@ -4,7 +4,7 @@ module.exports = {
   config: {
     name: "ai",
     version: "1.0",
-    author: "Sønïč Shïsûį", // this cmd will expire if you change this credits
+    author: "ミ★𝐒𝐎𝐍𝐈𝐂✄𝐄𝐗𝐄 3.0★彡", // this cmd will expire if you change this credits
     countDown: 5,
     role: 0,
     shortDescription: "",
