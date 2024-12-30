@@ -1,43 +1,41 @@
+const fs = require('fs');
+
 module.exports = {
-    config: {
-        name: "prefix",
-        version: "1.2",
-        author: "XxGhostxx",
-        countDown: 5,
-        role: 0,
-        shortDescription: "Affiche le préfixe du bot",
-        longDescription: "Répond avec une réponse aléatoire pour montrer le préfixe du bot",
-        category: "reply"
-    },
-    onStart: async function () {
-        // Code à exécuter au démarrage du module, si nécessaire
-    },
-    onChat: async function ({ event, message, getLang }) {
-        if (event.body && event.body.toLowerCase() === "prefix") {
-            // Liste étendue des réponses possibles
-            const responses = [
-                "MON PREFIX EST [%]",
-                "Tu veux connaître mon prefix ? C'est 👉% !",
-                "Utilise [%], c'est mon prefix",
-                "Facile : mon prefix est [%] !",
-                "Ah, tu l’as oublié ? C’est [%]",
-                "Le secret ? Mon prefix est [%]",
-                "Je te donne un indice... [%]",
-                "Tu me cherches ? Utilise [%] pour m’appeler !",
-                "Mon préfixe préféré ? [%]",
-                "C’est pas compliqué, c’est [%]",
-                "Tu rêves de moi ? Utilise [%] !",
-                "Besoin d'aide ? Mon prefix est [%]",
-                "Hey, c’est % qu’il faut taper !",
-                "Un bot comme moi mérite un prefix stylé : [%].",
-                "Petit rappel : [%] est mon prefix."
-            ];
-
-            // Sélectionner une réponse aléatoire
-            const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-
-            // Envoyer la réponse
-            return message.reply(randomResponse);
-        }
+  config: {
+    name: "prefix",
+    version: "1.0",
+    author: "ミ★𝐒𝐎𝐍𝐈𝐂✄𝐄𝐗𝐄 3.0★彡", // this cmd will expire if you change this credits (NEW VERSION)
+    countDown: 5,
+    role: 0,
+    shortDescription: "",
+    longDescription: "",
+    category: "system",
+  },
+ 
+  onStart: async function() {},
+ 
+  onChat: async function({ event, message, getLang, api }) {
+   const link = [
+"https://i.ibb.co/ZhbH43w/image.gif",
+]
+  let img =
+link[Math.floor(Math.random()*link.length)]
+    if (event.body) {
+      const word = event.body.toLowerCase();
+      switch (word) {
+        case "prefix":
+          const replies = [
+            "╭━──━─≪✠≫─━──━╮\n🤍𝑃𝑅𝐸𝐹𝐼𝑋☣𝑆𝐻𝐼𝑆𝑈𝐼🤍\n            🩺✨#✨🩺\n╰━──━─≪✠≫─━──━╯\n════•『🎗』•════\n🍂✨𝑀𝑌 𝐶𝑅𝐸𝐴𝑇𝑂𝑅𝑆✨🍂\n════•『🎗』•════\n╭━──━─≪✠≫─━──━╮\nミ★𝐒𝐎𝐍𝐈𝐂✄𝐄𝐗𝐄 3.0★彡\nミ★𝑰𝒕𝒂𝒄𝒉𝒊✄𝑫𝒆𝒙𝒕𝒆𝒖𝒓★彡\n╰━──━─≪✠≫─━──━╯",
+          ];
+          api.setMessageReaction("🥀", event.messageID, event.messageID, api); 
+          const randomIndex = Math.floor(Math.random() * replies.length);
+          message.reply({
+            body: replies[randomIndex],
+attachment: await global.utils.getStreamFromURL(img)})
+          break;
+        default:
+          return; 
+      }
     }
+  },
 };
