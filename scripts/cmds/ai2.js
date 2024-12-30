@@ -28,7 +28,7 @@ async function handleCommand(api, event, args, message) {
 
 
 
-        api.sendMessage(`웃➣『𝐒𝐇𝐈𝐒𝐔𝐈』ツ\n══════ •『🧡』• ══════\n${response}\n══════ •『🧡』• ══════`, event.threadID, messageID);
+        api.sendMessage(`༺『 𝐇𝐄𝐍𝐓𝐀𝐈ᬊ᭄𝐒𝐀𝐍 』༻\n══════ •『🧡』• ══════\n${response}\n══════ •『🧡』• ══════`, event.threadID, messageID);
 
     } catch (error) {
 
@@ -162,7 +162,7 @@ module.exports = {
 
             lastResponseMessageID = messageID;
 
-            api.sendMessage(`웃➣『𝐒𝐇𝐈𝐒𝐔𝐈』ツ\n══════ •『🖤』• ══════\n🌱${response}🌱\n══════ •『🖤』• ══════`, event.threadID, messageID);
+            api.sendMessage(`༺『 𝐇𝐄𝐍𝐓𝐀𝐈ᬊ᭄𝐒𝐀𝐍 』༻\n══════ •『🖤』• ══════\n🌱${response}🌱\n══════ •『🖤』• ══════`, event.threadID, messageID);
 
         } catch (error) {
 
@@ -180,7 +180,7 @@ module.exports = {
 
 
 
-        // Check if the message is a reply to the bot's message or starts with "shisui"
+        // Check if the message is a reply to the bot's message or starts with "sonic"
 
         if ((event.messageReply && event.messageReply.senderID === api.getCurrentUserID()) || (messageContent.startsWith("shisui") && event.senderID !== api.getCurrentUserID())) {
 
@@ -192,13 +192,13 @@ module.exports = {
 
                 lastResponseMessageID = messageID;
 
-                api.sendMessage(`웃➣『𝐒𝐇𝐈𝐒𝐔𝐈』ツ\n══════ •『🧡』• ══════\n 🍂${response}🍂\n══════ •『🖤』• ══════`, event.threadID, messageID);
+                api.sendMessage(`༺『 𝐇𝐄𝐍𝐓𝐀𝐈ᬊ᭄𝐒𝐀𝐍 』༻\n══════ •『🧡』• ══════\n 🍂${response}🍂\n══════ •『🖤』• ══════`, event.threadID, messageID);
 
             } catch (error) {
 
                 console.error("Error in onChat:", error.message);
 
-                api.sendMessage("웃➣『𝐒𝐇𝐈𝐒𝐔𝐈』ツ\n══════ •『💙』• ══════\n!!! 👾Moi qui pensait que t'étais intelligent👾 !!!", event.threadID);
+                api.sendMessage("༺『 𝐇𝐄𝐍𝐓𝐀𝐈ᬊ᭄𝐒𝐀𝐍 』༻\n══════ •『💙』• ══════\n!!! 👾Moi qui pensait que t'étais intelligent👾 !!!", event.threadID);
 
             }
 
