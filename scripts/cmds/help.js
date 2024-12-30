@@ -55,7 +55,7 @@ module.exports = {
             msg += ` ${cmds.join(" ".repeat(Math.max(1, 10 - cmds.join("").length)))}`;
           }
 
-          msg += ` ╰──────────────⊚\n`;
+          msg += `╰──────────────⊚\n`;
         }
       });
 
@@ -65,11 +65,11 @@ module.exports = {
       msg += `✎﹏﹏﹏﹏﹏﹏﹏﹏\n📣...|༺『 𝐇𝐄𝐍𝐓𝐀𝐈ᬊ᭄𝐒𝐀𝐍 』༻\n✎﹏﹏﹏﹏﹏﹏﹏﹏`; // its not decoy so change it if you want 
 
       const helpListImages = [
-        "https://i.ibb.co/NZB12dL/image.jpg", // add image link here
-        "https://i.ibb.co/xCqLBkB/image.jpg",
-        "https://i.ibb.co/hLwkPfG/image.jpg",
-        "https://i.ibb.co/L1ncxZf/image.jpg",
-        "https://i.ibb.co/2crgLSM/image.jpg",
+        "https://i.ibb.co/r0MFDQF/image.jpg", // add image link here
+        "https://i.ibb.co/xM1MBhL/image.jpg",
+        "https://i.ibb.co/JpGBw5w/image.jpg",
+        "https://i.ibb.co/stVcnJZ/image.jpg",
+        "https://i.ibb.co/tKVNm2L/image.jpg",
 
 "https://i.ibb.co/tbSwLpq/image.jpg",
         // Add more image links as needed
