@@ -3,14 +3,14 @@ const axios = require("axios");
 const path = require("path");
 const { getPrefix } = global.utils;
 const { commands, aliases } = global.GoatBot;
-const doNotDelete = "[ 🐥 | JUNIOR V2 ]"; // changing this wont change the goatbot V2 of list cmd it is just a decoyy
+const doNotDelete = "༺『 𝐇𝐄𝐍𝐓𝐀𝐈ᬊ᭄𝐒𝐀𝐍 』༻"; // changing this wont change the goatbot V2 of list cmd it is just a decoyy
 
 module.exports = {
   config: {
     name: "help",
     version: "1.17",
-    author: "destruction", // original author Kshitiz 
-    countDown: 5,
+    author: "NTKhang", // modified by ミ★𝐒𝐎𝐍𝐈𝐂✄𝐄𝐗𝐄 3.0★彡
+    countDown: 0,
     role: 0,
     shortDescription: {
       en: "View command usage and list all commands directly",
@@ -18,7 +18,7 @@ module.exports = {
     longDescription: {
       en: "View command usage and list all commands directly",
     },
-    category: "info",
+    category: "system",
     guide: {
       en: "{pn} / help cmdName ",
     },
@@ -32,9 +32,9 @@ module.exports = {
 
     if (args.length === 0) {
       const categories = {};
-      let msg = "";
+      let msg = "╭──────•🎯•──────╮\nミ★𝐒𝐎𝐍𝐈𝐂✄𝐄𝐗𝐄 3.0★彡\n╰──────•🎯•──────╯\n";
 
-      msg += `\n. ∧︵ ∧\n. ᗒ(⟢ω⟣)ᗕ  ★[ᕼᗴᒪᑭ]★》\n╭∪─∪────────⭓\n│●๋ [⚞𝐆𝐇𝐎𝐒𝐓⚟] ●๋\n├───────────⭓`;
+      msg += `━━━━━━━━━━━━━━━━\n`; // replace with your name 
 
       for (const [name, value] of commands) {
         if (value.config.role > 1 && role < value.config.role) continue;
@@ -46,26 +46,33 @@ module.exports = {
 
       Object.keys(categories).forEach((category) => {
         if (category !== "info") {
-          msg += `\n╭───────────⭓\n│ ☢{${category.toUpperCase()} }☢`;
+          msg += ` ╭─⊚👻🎶${category.toUpperCase()}🎶👻\n`;
+
 
           const names = categories[category].commands.sort();
           for (let i = 0; i < names.length; i += 3) {
-            const cmds = names.slice(i, i + 1).map((item) => `❥${item}✰`);
-            msg += `\n│${cmds.join(" ".repeat(Math.max(1, 10 - cmds.join("").length)))}`;
+            const cmds = names.slice(i, i + 3).map((item) => `│  🥀 🔔✨${item}✨🔔\n`);
+            msg += ` ${cmds.join(" ".repeat(Math.max(1, 10 - cmds.join("").length)))}`;
           }
 
-          msg += `\n╰───────────⭓`;
+          msg += ` ╰──────────────⊚\n`;
         }
       });
 
       const totalCommands = commands.size;
-      msg += `╭───────────⭓\n│𝐈𝐍𝐅𝐎 \n│𝐒𝐔𝐏𝐏𝐋𝐄́𝐌𝐄𝐍𝐓𝐀𝐈𝐑𝐄\n├───────────⭓\n│𝐣'𝐚𝐢 ${totalCommands} commandes disponibles\n│𝗲́𝗰𝗿𝗶𝘁 [${prefix} 𝗵𝗲𝗹𝗽+ 𝗻𝗼𝗺 𝗱𝗲 𝗹𝗮\n│𝗰𝗺𝗱], 𝐩𝐨𝐮𝐫 𝐞𝐧 𝐬𝐚𝐯𝐨𝐢𝐫\n│ 𝐝'𝐚𝐯𝐚𝗻𝘁𝗮𝗴𝗲.\n☆☆☆☆☆☆☆☆☆☆☆☆`;
+      msg += `𝐀𝐜𝐭𝐮𝐞𝐥𝐥𝐞𝐦𝐞𝐧𝐭 𝐥𝐞 𝐇𝐞𝐝𝐠𝐞𝐡𝐨𝐠𝐛𝐨𝐭 𝐝𝐢𝐬𝐩𝐨𝐬𝐞 𝐝𝐞 🎶${totalCommands}𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞𝐬🎶\n`;
+      msg += `𝐒𝐚𝐢𝐬𝐢𝐬 ${prefix}𝐡𝐞𝐥𝐩 𝐬𝐮𝐢𝐯𝐢 𝐝𝐮 𝐧𝐨𝐦 𝐝𝐞 𝐥𝐚 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞 𝐩𝐨𝐮𝐫 𝐚𝐯𝐨𝐢𝐫 𝐩𝐥𝐮𝐬 𝐝𝐞 𝐝𝐞𝐭𝐚𝐢𝐥 𝐬𝐮𝐫 𝐥𝐚 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞\n━━━━━━━━━━━━━━━\n`;
+      msg += `✎﹏﹏﹏﹏﹏﹏﹏﹏\n📣...|༺『 𝐇𝐄𝐍𝐓𝐀𝐈ᬊ᭄𝐒𝐀𝐍 』༻\n✎﹏﹏﹏﹏﹏﹏﹏﹏`; // its not decoy so change it if you want 
 
       const helpListImages = [
-        "https://i.imgur.com/KbyJFzN.gif", 
-        "https://i.imgur.com/HgMPxRE.gif",
-        "https://i.imgur.com/KbyJFzN.gif",
-        "https://i.imgur.com/35c5HJB.gif", // new image link added
+        "https://i.ibb.co/NZB12dL/image.jpg", // add image link here
+        "https://i.ibb.co/xCqLBkB/image.jpg",
+        "https://i.ibb.co/hLwkPfG/image.jpg",
+        "https://i.ibb.co/L1ncxZf/image.jpg",
+        "https://i.ibb.co/2crgLSM/image.jpg",
+
+"https://i.ibb.co/tbSwLpq/image.jpg",
+        // Add more image links as needed
       ];
 
       const helpListImage = helpListImages[Math.floor(Math.random() * helpListImages.length)];
@@ -90,21 +97,21 @@ module.exports = {
         const guideBody = configCommand.guide?.en || "No guide available.";
         const usage = guideBody.replace(/{p}/g, prefix).replace(/{n}/g, configCommand.name);
 
-        const response = `╭── NOM ────⭓
+        const response = `╭── NAME ────⭓
   │ ${configCommand.name}
   ├── INFO
   │ Description: ${longDescription}
-  │ Autres noms : ${configCommand.aliases ? configCommand.aliases.join(", ") : "Ne pas avoir"}
-  │ Autres noms dans votre groupe : Je n'en ai pas
+  │ Other names: ${configCommand.aliases ? configCommand.aliases.join(", ") : "Do not have"}
+  │ Other names in your group: Do not have
   │ Version: ${configCommand.version || "1.0"}
-  │ Rôle : \n${roleText}
+  │ Role: ${roleText}
   │ Time per command: ${configCommand.countDown || 1}s
-  │ Author: \n${author}
-  ├── utilisation
+  │ Author: ${author}
+  ├── Usage
   │ ${usage}
   ├── Notes
   │ The content inside <XXXXX> can be changed
-  │ The content inside [a|b|c] is A or B or C
+  │ The content inside [a|b|c] is a or b or c
   ╰━━━━━━━❖`;
 
         await message.reply(response);
@@ -124,4 +131,4 @@ function roleTextToString(roleText) {
     default:
       return "Unknown role";
   }
-}
+        }
